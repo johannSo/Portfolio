@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Ghibli';
+  src: url('https://fonts.cdnfonts.com/css/ghibli') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sticky-note {
+  position: relative;
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5b5 100%);
+  border: 1px solid rgba(74, 60, 44, 0.2);
+}
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #e8d5b5 transparent transparent;
+  box-shadow: -1px 1px 1px rgba(74, 60, 44, 0.1);
+}
+
+.sticky-note::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, rgba(74, 60, 44, 0.1) 0%, rgba(74, 60, 44, 0) 50%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5e6d3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b6b4a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b4a2a;
+}
